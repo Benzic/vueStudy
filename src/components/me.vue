@@ -18,6 +18,45 @@
 <template>
   <div class="hello">
     <h1>page03</h1>
-    <span>xx。</span>
+    <span v-html="msg" :isd='msg'>{{msg}}</span>
+    <a :href = 'url' >sendTo</a>
+    <span>{{nnn.mm}}{{nnn.nn}}</span>
+    <button @click.prevent='change' :disabled='istrue'>change</button>
   </div>
 </template>
+<script>
+  var nnn = {
+    mm:'111',
+    nn:'222'
+  }
+  Object.freeze(nnn)
+  export default{
+    data(){
+      return{
+        msg:'just for me',
+        istrue:false,
+        url:'https://www.baidu.com',
+        nnn
+      }
+    },
+    created(){
+      const p = {
+        name:'ss',
+        age:'222'
+      }
+      const k = {
+        ...p,
+        mm:'sssx'
+      }
+      console.log(k)
+    },
+    methods:{
+      change:function(){
+        this.msg = '<sapn>hhhhh</span><p>xxx</p>'
+        this.istrue = true
+        this.url = 'https://www.sina.com'
+        this.nnn.nn = 'sssss'
+      }
+    }
+  }
+</script>
