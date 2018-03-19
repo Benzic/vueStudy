@@ -30,7 +30,12 @@ export default [
   { name: 'live', path: '/live', component: live },
   { name: 'map', path: '/map', component: map },
   { name: 'notes', path: '/notes', component: notes },
-  { name: 'me', path: '/me', component: me },
+  { name: 'me', path: '/me', component: me ,
+    children: [
+      { name: 'child01', path: '/', component: Child01 },
+      { name: 'child02', path: '/02', component: Child02 },
+    ]
+  },
   //命名路由&路由传参
-  { name: 'detail', path: '/detail', component: detail },
+  { name: 'chi', path: '/detail', component: detail }
 ]

@@ -28,11 +28,15 @@
     <input type="text" v-model='firstName'>
     <input type="text" v-model='lastName' @keyup.13='ll'>
     <div v-for='n in even'>{{n}}</div>
-    <div v-for='n in 10'>{{n}}</div>
+    <div v-for='n in 3'>{{n}}</div>
     <div v-if='istrue'><input type="text" value='just' key='01'></div>
     <div v-if='!istrue'><input type="text" value='me' key='02'></div>
     <button @click.prevent='change' >change</button>
     <button v-on:click="ll('mdmasdmasm',$event)">co</button>
+    <router-link to='/me/'>to 01</router-link>
+    <router-link to='/02'>to 02</router-link>
+    <my-compoents></my-compoents>
+    <router-view></router-view>
   </div>
 </template>
 <script>
@@ -73,6 +77,11 @@
       },
       firstName:function(val){
         this.fullName = val+' '+this.lastName
+      }
+    },
+    components:{
+      'my-compoents':{
+        template:"<h1>我是局部组件x</h1>"
       }
     },
     computed:{
