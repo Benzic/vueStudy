@@ -14,25 +14,26 @@ export default {
 	    }
 	},
 	created:function(){
+    
 	},
 	watch: {
-      //路由监听方法
-      '$route' (to, from) {
-        console.log(this.$route)
+    //路由监听方法
+    '$route' (to, from) {
+      console.log(this.$route)
+    },
+  },
+  methods: {
+      clickMenu:function(index){
+      	console.log(index)
       },
-    },
-    methods: {
-        clickMenu:function(index){
-        	console.log(index)
-        },
-    },
-    filters: {
-    	title_class:function(value){
-    		if(value){
-    			return 'iconfont '+value
-    		}
-    	}
-    }
+  },
+  filters: {
+  	title_class:function(value){
+  		if(value){
+  			return 'iconfont '+value
+  		}
+  	}
+  }
 }
 </script>
 <style>
