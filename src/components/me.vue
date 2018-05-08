@@ -4,13 +4,13 @@
           <div class="default" v-if="key!='name'" @dblclick='clickItem("name")'>
             {{form.name}}
           </div>
-          <el-input v-model="form.name" v-if="key=='name'"></el-input>
+          <el-input v-model="form.name" v-if="key=='name'"  @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="address" >
           <div class="default" v-if="key!='address'" @dblclick='clickItem("address")'>
               {{form.address}}
           </div>
-          <el-input v-model="form.address" v-if="key=='address'"></el-input>
+          <el-input v-model="form.address" v-if="key=='address'" @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="出生日期">
           <el-col :span="11">
@@ -21,37 +21,37 @@
           <div class="default" v-if="key!='job'" @dblclick='clickItem("job")'>
               {{form.job}}
           </div>
-          <el-input v-model="form.job" v-if="key=='job'"></el-input>
+          <el-input v-model="form.job" v-if="key=='job'" @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="phone">
           <div class="default" v-if="key!='phone'" @dblclick='clickItem("phone")'>
               {{form.phone}}
           </div>
-          <el-input v-model="form.phone" v-if="key=='phone'"></el-input>
+          <el-input v-model="form.phone" v-if="key=='phone'" @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="微信号">
           <div class="default" v-if="key!='微信号'" @dblclick='clickItem("微信号")'>
               {{form.wxchat}}
           </div>
-          <el-input v-model="form.wxchat" v-if="key=='微信号'"></el-input>
+          <el-input v-model="form.wxchat" v-if="key=='微信号'" @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="email">
           <div class="default" v-if="key!='email'" @dblclick='clickItem("email")'>
               {{form.email}}
           </div>
-          <el-input v-model="form.email" v-if="key=='email'"></el-input>
+          <el-input v-model="form.email" v-if="key=='email'" @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="个人网站">
           <div class="default" v-if="key!='个人网站'" @dblclick='clickItem("个人网站")'>
               {{form.website}}
           </div>
-          <el-input v-model="form.website" v-if="key=='个人网站'"></el-input>
+          <el-input v-model="form.website" v-if="key=='个人网站'" @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="gitHub">
           <div class="default" v-if="key!='gitHub'" @dblclick='clickItem("gitHub")'>
               {{form.github}}
           </div>
-          <el-input v-model="form.github" v-if="key=='gitHub'"></el-input>
+          <el-input v-model="form.github" v-if="key=='gitHub'" @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="兴趣爱好">
           <el-checkbox-group >
@@ -65,7 +65,7 @@
           <div class="defaultArea" v-if="key!='个人能力'" @dblclick='clickItem("个人能力")'>
             {{form.skills}}
           </div>
-          <el-input type="textarea" v-model="form.skills" v-if="key=='个人能力'"></el-input>
+          <el-input type="textarea" v-model="form.skills" v-if="key=='个人能力'" @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="擅长技能">
           <el-checkbox-group >
@@ -80,13 +80,13 @@
               <div class="default" v-if="key!='项目经历'" @dblclick='clickItem("项目经历")'>
                   {{form.project}}
               </div>
-              <el-input v-model="form.project" v-if="key=='项目经历'"></el-input>
+              <el-input v-model="form.project" v-if="key=='项目经历'" @blur='normol()'></el-input>
             </el-form-item>
             <el-form-item label="项目描述">
               <div class="defaultArea" v-if="key!='项目描述'" @dblclick='clickItem("项目描述")'>
                   {{form.prodesc}}
               </div>
-              <el-input type="textarea" v-model="form.prodesc" v-if="key=='项目描述'"></el-input>
+              <el-input type="textarea" v-model="form.prodesc" v-if="key=='项目描述'" @blur='normol()'></el-input>
             </el-form-item>
         </div>
         <el-form-item>
@@ -126,6 +126,9 @@
       clickItem (key){
         console.log(key);
         this.key = key;
+      },
+      normol (){
+        this.key = ''
       }
     }
   }
