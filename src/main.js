@@ -5,12 +5,12 @@ import App from './App'
 import VueRouter from 'vue-router'
 import routes from './routes.js'
 import echarts from 'echarts'
-import echartsGl from 'echarts-gl'
+import ElementUI from 'element-ui';
 import china from './assets/china.js'
 // import echarts from '../static/echarts-gl.js'
 Vue.prototype.$echarts = echarts 
-Vue.prototype.$echartsGl = echartsGl 
 Vue.use(VueRouter)
+Vue.use(ElementUI);
 Vue.directive('focus', {
   // 当被绑定的元素插入到 DOM 中时……
   inserted: function (el) {
@@ -27,5 +27,6 @@ new Vue({
   el: '#app',
   template: '<App/>',
   components: { App },
+  render: h => h(App),
   router
 })

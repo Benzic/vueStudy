@@ -133,5 +133,12 @@ export default {
   .manBox{
     width: 100%;
     height:95%;
+    overflow: auto;
   }
+  .date input{
+      display: none;
+    }
+    .el-textarea textarea{
+      min-height: 100px;
+    }
 </style>

@@ -21,7 +21,7 @@
             <option value ="120" >轻度污染及以上</option>
             <option value ="170" >中度污染及以上</option>
             <option value ="90" >轻度污染及以下</option>
-            <option value ="140" >中度污染及以下</option>
+            <option value ="140" >中度 污染及以下</option>
           </select>
         </div>
         <button @click='subKey'>确认</button>

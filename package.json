@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "echarts": "^4.0.4",
-    "element-ui": "^1.0.0",
+    "element-ui": "^1.4.13",
     "vue": "^2.1.0"
   },
   "devDependencies": {

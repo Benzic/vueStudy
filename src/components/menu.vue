@@ -1,7 +1,20 @@
 <template>
   <div id="menuBox">
   	<ul>
-  		<li v-for='(item,index) in menuList' v-on:click='clickMenu(index)'><i :class="item.className|title_class"></i><router-link :to='item.src'>{{item.title}}</router-link></li>
+  		<li v-for='(item,index) in menuList' v-on:click='clickMenu(index)'>
+				<div  v-if='item.src'>
+					<i :class="item.className|title_class"></i>
+					<router-link :to='item.src' >{{item.title}}</router-link>
+				</div>
+				<div v-else>
+					<i :class="item.className|title_class"></i>
+					<span @click='showSon(index)'>{{item.title}}</span>
+					<div v-for='(it,ind) in item.son' v-if='showIndex == index'>
+							<i :class="it.className|title_class"></i>
+							<router-link :to='it.src' >{{it.title}}</router-link>
+					</div>
+				</div>
+			</li>
   	</ul>
   </div>
 </template>
@@ -10,7 +23,51 @@ export default {
 	name: 'menuBox',
 	data () {
 	    return {
-	      	menuList:[{title:'首页',src:'/',className:'icon-shouye'},{title:'列表',src:'/list',className:'icon-manage'},{title:'详情',src:'/detail',className:'icon-xiangqing'},{title:'相册',src:'/photo',className:'icon-xiangce1'},{title:'日记',src:'/notes',className:'icon-icon_diary'},{title:'全球地图',src:'/map',className:'icon-weizhi'},{title:'在线观看',src:'/live',className:'icon-live'},{title:'个人中心',src:'/me',className:'icon-user'},{title:'登出',src:'/me',className:'icon-tuichu'}]
+					showIndex:0,
+					menuList:[{title:'首页',src:'/',className:'icon-shouye'},
+					{title:'个人中心',src:'/me',className:'icon-manage'},
+					{title:'文章管理',className:'icon-xiangqing',
+						son:[{
+								title:'文章列表',src:'/artList',className:'icon-xiangce1'
+							},
+							{
+								title:'新增文章',src:'/addArt',className:'icon-xiangce1'
+							},
+							{
+								title:'已删除',src:'/deletedArt',className:'icon-xiangce1'
+							}]	
+					},
+					{title:'相册管理',className:'icon-xiangce1',
+						son:[{
+							title:'所有图片',src:'/photo',className:'icon-xiangce1'
+						},
+						{
+							title:'新增图片',src:'/addPhoto',className:'icon-xiangce1'
+						},
+						{
+							title:'已删除',src:'/deletedPhoto',className:'icon-xiangce1'
+						}]
+					},
+					{title:'demo管理',className:'icon-icon_diary',
+						son:[{
+									title:'demo列表',src:'/demoList',className:'icon-xiangce1'
+								},
+								{
+									title:'新增demo',src:'/addDemo',className:'icon-xiangce1'
+								},
+								{
+									title:'已删除',src:'/deletedDemo',className:'icon-xiangce1'
+								}]	
+					},
+					{title:'留言管理',className:'icon-weizhi',
+						son:[{
+									title:'留言列表',src:'/artList',className:'icon-xiangce1'
+								},
+								{
+									title:'已删除',src:'/deletedArt',className:'icon-xiangce1'
+								}]	
+					},
+					{title:'登出',src:'/logout',className:'icon-tuichu'}]
 	    }
 	},
 	created:function(){
@@ -25,7 +82,14 @@ export default {
   methods: {
       clickMenu:function(index){
       	console.log(index)
-      },
+			},
+			showSon (index) {
+				if(this.showIndex == index){
+					this.showIndex = 0
+				}else{
+					this.showIndex = index
+				}
+			}
   },
   filters: {
   	title_class:function(value){
@@ -47,7 +111,6 @@ export default {
    #menuBox li{
    		margin-bottom: 10px;
    		color: white;
-   		height: 40px;
    		line-height: 40px;
    }
    #menuBox li a{

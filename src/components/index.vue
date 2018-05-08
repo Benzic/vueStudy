@@ -6,7 +6,7 @@
 <script>
     import allCity from '../assets/allCity.json'
 	export default {
-	  name: 'hello',
+	  name: 'hel lo',
 	  data () {
 	    return {
 	    	  geoCoordMap:allCity

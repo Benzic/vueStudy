@@ -21,7 +21,7 @@ export default {
 	watch: {
       //路由监听方法
       '$route' (to, from) {
-        console.log(this.$route)
+        console.log( this.$route)
       },
     },
     methods: {

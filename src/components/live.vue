@@ -13,8 +13,6 @@
 	    }
 	  },
 	  created:function(){
-	  	var echartsGl = require('echarts-gl')
-		console.log(this.$echartsGl)
 		//this.drawLine()
 	  },
 	  mounted(){
