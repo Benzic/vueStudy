@@ -11,7 +11,7 @@
                     <span >{{it}}</span>
                 </el-badge>
                 <span    style="margin-left: 20px;" v-show='dele != it' v-if="it!='@'">{{it}}</span>
-                <div    style="margin-left: 20px;width: 80px;background: #f1f1f1" v-if="it=='@'" contenteditable='true' @change='saveValue(index)'></div>
+                <div    style="margin-left: 20px;width: 80px;background: #f1f1f1" v-if="it=='@'" contenteditable='true' @input='saveValue(index)'></div>
             </div>
             <button type="button" class="el-button el-button--success is-circle" style="margin-left: 20px" @click='addKind'><!----><i class="el-icon-plus"></i><!----></button>
         </el-form-item>
