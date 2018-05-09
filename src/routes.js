@@ -6,6 +6,8 @@ import notes from './components/notes'
 import me from './components/me'
 import map from './components/map'
 import live from './components/live'
+import artList from './components/artList'
+import artcle from './components/artcle'
 
 import Child01 from './components/childs/child01'
 import Child02 from './components/childs/child02'
@@ -27,6 +29,8 @@ export default [
   //动态路由
   { name: 'list', path: '/list', component: list },
   { name: 'photo', path: '/photo', component: photo },
+  { name: 'artList', path: '/artList', component: artList },
+  { name: 'artcle' , path: '/artcle', component : artcle},
   { name: 'live', path: '/live', component: live },
   { name: 'map', path: '/map', component: map },
   { name: 'notes', path: '/notes', component: notes },

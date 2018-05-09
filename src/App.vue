@@ -136,9 +136,18 @@ export default {
     overflow: auto;
   }
   .date input{
-      display: none;
-    }
-    .el-textarea textarea{
-      min-height: 100px;
-    }
+    display: none;
+  }
+  .el-table__body-wrapper{
+      overflow: auto;
+  }
+  .el-upload-list{
+    display: flex;
+  }
+  .el-upload-list__item:first-child{
+    margin-top: 5px;
+  }
+  .upload-demo{
+    display: flex;
+  }
 </style>
