@@ -8,6 +8,9 @@ import echarts from 'echarts'
 import ElementUI from 'element-ui';
 import china from './assets/china.js'
 // import echarts from '../static/echarts-gl.js'
+import  VueQuillEditor from 'vue-quill-editor'
+
+Vue.use(VueQuillEditor)
 Vue.prototype.$echarts = echarts 
 Vue.use(VueRouter)
 Vue.use(ElementUI);

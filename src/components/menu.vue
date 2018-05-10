@@ -31,7 +31,7 @@ export default {
 								title:'文章列表',src:'/artList',className:'icon-xiangce1'
 							},
 							{
-								title:'新增文章',src:'/addArt',className:'icon-xiangce1'
+								title:'新增文章',src:'/newArtcle',className:'icon-xiangce1'
 							},
 							{
 								title:'已删除',src:'/deletedArt',className:'icon-xiangce1'
@@ -39,10 +39,7 @@ export default {
 					},
 					{title:'相册管理',className:'icon-xiangce1',
 						son:[{
-							title:'所有图片',src:'/photo',className:'icon-xiangce1'
-						},
-						{
-							title:'新增图片',src:'/addPhoto',className:'icon-xiangce1'
+							title:'所有图片',src:'/pictures',className:'icon-xiangce1'
 						},
 						{
 							title:'已删除',src:'/deletedPhoto',className:'icon-xiangce1'

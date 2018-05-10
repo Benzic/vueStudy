@@ -8,7 +8,10 @@ import map from './components/map'
 import live from './components/live'
 import artList from './components/artList'
 import artcle from './components/artcle'
-
+import newArtcle from './components/newArtcle'
+import demoList from './components/demoList'
+import pictures from './components/pictures'
+import picList from './components/picList'
 import Child01 from './components/childs/child01'
 import Child02 from './components/childs/child02'
 export default [
@@ -31,6 +34,10 @@ export default [
   { name: 'photo', path: '/photo', component: photo },
   { name: 'artList', path: '/artList', component: artList },
   { name: 'artcle' , path: '/artcle', component : artcle},
+  { name: 'newArtcle' , path:'/newArtcle', component : newArtcle},
+  { name: 'demoList' , path:'/demoList', component : demoList},
+  { name: 'pictures' ,path:'/pictures',component:pictures},
+  { name: 'picList' ,path:'/picList',component:picList},
   { name: 'live', path: '/live', component: live },
   { name: 'map', path: '/map', component: map },
   { name: 'notes', path: '/notes', component: notes },

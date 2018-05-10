@@ -150,4 +150,7 @@ export default {
   .upload-demo{
     display: flex;
   }
+  .ql-snow .ql-editor img {
+    max-width:300px;
+  }
 </style>
