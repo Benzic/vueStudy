@@ -13,7 +13,6 @@ import Child01 from './components/childs/child01'
 import Child02 from './components/childs/child02'
 export default [
   //嵌套路由
-  // { path: '/', component: Page01 },
   // //动态路由
   // { name: 'Page02', path: '/02/:id', component: Page02 },
   // //命名路由&路由传参
