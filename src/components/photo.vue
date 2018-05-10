@@ -26,7 +26,7 @@ export default {
   <div class="product-sxl" data-id="10828924" id="s-page-container">
    <div data-reactroot="">
     <!-- react-empty: 2 -->
-     <div class="s-navbar-section navigator side-header strikingly-fixed" id="header-container">
+     <div class="s-navbar-section navigator side-header strikingly-fixed " id="header-container">
       <div class="header-inner">
        <ul class="s-nav">
         <li><a class="s-nav-item" href="http://bzz.sxl.cn/#_1"><span class="s-font-body">主页</span></a></li>
