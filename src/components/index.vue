@@ -1,12 +1,29 @@
 <template>
-  <div class="hello" style="height:100%">
+    <div style="height: 100%;">
+            <div class="manTitle">
+                    <headBox v-bind:show='show' v-on:changeStatus = "changeSt()"></headBox>
+                    </div>
+                    <div class="mainBox">
+                    <div class="leftPart" v-if='show'>
+                        <globalMenu></globalMenu>
+                    </div>
+                    <div class="rightPart">
+                        <div class="topPart"></div>
+                        <div class="manBox">
+                        <router-view></router-view>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    
+  <!-- <div class="hello" style="height:100%">
     <div id="myChart" :style="{width: '100%', height: '100%'}"></div>
-  </div>
+  </div> -->
 </template>
 <script>
     import allCity from '../assets/allCity.json'
 	export default {
-	  name: 'hel lo',
+	  name: 'hello',
 	  data () {
 	    return {
 	    	  geoCoordMap:allCity

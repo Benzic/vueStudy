@@ -54,12 +54,14 @@
           <el-input v-model="form.github" v-if="key=='gitHub'" @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="兴趣爱好">
-          <el-checkbox-group >
-            <el-badge :value="'x'" class="item_checkbox" v-for='(it,index) in form.favorite' >
-              <el-checkbox :label="it" name="type"></el-checkbox>
-            </el-badge>
-          </el-checkbox-group>
-          <i class="el-icon-circle-plus-outline"></i>
+          <div v-for='(it,index) in form.favorite' style="display: inline-block" @mouseenter='moveOn(it)' @mouseleave='moveOut()' >
+              <el-badge :value="'x'" class="item_checkbox"  v-show='dele == it' v-if="it!='@'">
+                  <span >{{it}}</span>
+              </el-badge>
+              <span    style="margin-left: 20px;" v-show='dele != it' v-if="it!='@'">{{it}}</span>
+              <div    style="margin-left: 20px;width: 80px;background: #f1f1f1" v-if="it=='@'" contenteditable='true' @input='saveValue(index)'></div>
+          </div>
+          <button type="button" class="el-button el-button--success is-circle" style="margin-left: 20px" @click='addKind'><!----><i class="el-icon-plus"></i><!----></button>
         </el-form-item>
         <el-form-item label="个人能力">
           <div class="defaultArea" v-if="key!='个人能力'" @dblclick='clickItem("个人能力")'>
@@ -68,12 +70,14 @@
           <el-input type="textarea" v-model="form.skills" v-if="key=='个人能力'" @blur='normol()'></el-input>
         </el-form-item>
         <el-form-item label="擅长技能">
-          <el-checkbox-group >
-            <el-badge :value="'x'" class="item_checkbox" v-for='(it,index) in form.skill' >
-              <el-checkbox :label="it" name="type"></el-checkbox>
-            </el-badge>
-          </el-checkbox-group>
-          <i class="el-icon-circle-plus-outline"></i>
+            <div v-for='(it,index) in form.skill' style="display: inline-block" @mouseenter='moveOn(it)' @mouseleave='moveOut()' >
+                <el-badge :value="'x'" class="item_checkbox"  v-show='dele == it' v-if="it!='@'">
+                    <span >{{it}}</span>
+                </el-badge>
+                <span    style="margin-left: 20px;" v-show='dele != it' v-if="it!='@'">{{it}}</span>
+                <div    style="margin-left: 20px;width: 80px;background: #f1f1f1" v-if="it=='@'" contenteditable='true' @input='saveValue(index)'></div>
+            </div>
+            <button type="button" class="el-button el-button--success is-circle" style="margin-left: 20px" @click='addKind'><!----><i class="el-icon-plus"></i><!----></button>
         </el-form-item>
         <div>
             <el-form-item label="项目经历">
@@ -129,6 +133,27 @@
       },
       normol (){
         this.key = ''
+      },
+      saveValue (e) {
+          console.log('w')
+      },
+      addKind () {
+          console.log(this.form.kind)
+          this.form.kind.push('@')
+      },
+      saveTxt (e) {
+          console.log(window.getSelection(), window.clipboardData())
+      },
+      moveOn (val) {
+          console.log(val)
+          //this.dele = val
+      },
+      moveOut () {
+          console.log('ss')
+          //this.dele = ''
+      },
+      dele () {
+        
       }
     }
   }

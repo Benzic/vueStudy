@@ -24,7 +24,7 @@ export default {
 	data () {
 	    return {
 					showIndex:0,
-					menuList:[{title:'首页',src:'/',className:'icon-shouye'},
+					menuList:[{title:'首页',src:'/login',className:'icon-shouye'},
 					{title:'个人中心',src:'/me',className:'icon-manage'},
 					{title:'文章管理',className:'icon-xiangqing',
 						son:[{
@@ -58,7 +58,7 @@ export default {
 					},
 					{title:'留言管理',className:'icon-weizhi',
 						son:[{
-									title:'留言列表',src:'/artList',className:'icon-xiangce1'
+									title:'留言列表',src:'/messages',className:'icon-xiangce1'
 								},
 								{
 									title:'已删除',src:'/deletedArt',className:'icon-xiangce1'

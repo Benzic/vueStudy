@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="manTitle">
+    <!-- <div class="manTitle">
       <headBox v-bind:show='show' v-on:changeStatus = "changeSt()"></headBox>
     </div>
     <div class="mainBox">
@@ -10,10 +10,11 @@
       <div class="rightPart">
         <div class="topPart"></div>
         <div class="manBox">
-          <router-view></router-view>
+          
         </div>
       </div>
-    </div>
+    </div> -->
+    <router-view></router-view>
     <!-- <h1>用router-link实现跳转</h1>
     <router-link to="/">跳转到Page01</router-link>
     <router-link to="/" replace>替换到Page01</router-link>
@@ -99,6 +100,7 @@ export default {
   a{
     text-decoration: none;
   }
+
   li{
     list-style:none;
   }
@@ -118,7 +120,6 @@ export default {
   }
   .leftPart{
     width: 10%;
-    height: 100%;
     text-align: center;
   }
   .rightPart{
