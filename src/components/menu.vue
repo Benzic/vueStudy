@@ -50,7 +50,7 @@ export default {
 									title:'demo列表',src:'/demoList',className:'icon-xiangce1'
 								},
 								{
-									title:'新增demo',src:'/addDemo',className:'icon-xiangce1'
+									title:'新增demo',src:'/newDemo',className:'icon-xiangce1'
 								},
 								{
 									title:'已删除',src:'/deletedDemo',className:'icon-xiangce1'

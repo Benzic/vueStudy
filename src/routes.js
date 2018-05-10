@@ -12,10 +12,13 @@ import newArtcle from './components/newArtcle'
 import demoList from './components/demoList'
 import pictures from './components/pictures'
 import picList from './components/picList'
+import newDemo from './components/newDemo'
+
 import Child01 from './components/childs/child01'
 import Child02 from './components/childs/child02'
 export default [
   //嵌套路由
+  // { path: '/', component: Page01 },
   // //动态路由
   // { name: 'Page02', path: '/02/:id', component: Page02 },
   // //命名路由&路由传参
@@ -35,6 +38,7 @@ export default [
   { name: 'artcle' , path: '/artcle', component : artcle},
   { name: 'newArtcle' , path:'/newArtcle', component : newArtcle},
   { name: 'demoList' , path:'/demoList', component : demoList},
+  { name: 'newDemo', path:'newDemo', component:newDemo},
   { name: 'pictures' ,path:'/pictures',component:pictures},
   { name: 'picList' ,path:'/picList',component:picList},
   { name: 'live', path: '/live', component: live },
